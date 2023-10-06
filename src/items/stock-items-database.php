@@ -1,9 +1,9 @@
 <?php
 
-$host = "localhost";
-$dbname = "stock_items";
-$username = "root";
-$password = "";
+$host = "localhost:3306";
+$dbname = "Stock_items";
+$username = "VeiwStockItemUser";
+$password = "56s78SXKNnH";
 
 $mysqli = new mysqli($host, $username, $password, $dbname);
 

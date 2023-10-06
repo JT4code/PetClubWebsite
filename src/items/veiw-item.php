@@ -5,32 +5,32 @@
   session_start();
 
   if (!(isset($_GET['quantity']))) {
-    $item_title = $_GET['item_name'];
+    $name = $_GET['name'];
+    $pet_type = $_GET['item_pet_type'];
 
     $mysqli = require __DIR__ . "/stock-items-database.php";
 
     $sql = sprintf("SELECT * FROM items
-    WHERE title = '%s'",
-    $mysqli->real_escape_string($item_title));
+    WHERE name = '%s' AND pet_type = '%s'",
+    $mysqli->real_escape_string($name), $mysqli->real_escape_string($pet_type));
       
     $result = $mysqli->query($sql);
       
     $item_data = $result->fetch_assoc();
 
-    $item_ID = $item_data["ID"];
-    $item_image_path = $item_data["Img_path"];
     $price = $item_data["Price"];
     $sale_percentage = $item_data["Discount"];
-    $stock_quantity = $item_data["Stock_quantity"];
     $item_description = $item_data["Description"];
+    $item_image_path = $item_data["Img_path"];
+    $stock_quantity = $item_data["Stock_quantity"];
     $item_type = $item_data["Item_type"];
     $pet_type = $item_data["Pet_type"];
 
-    $_SESSION["veiwing-item"] = $item_title;
+    $_SESSION["veiwing-item"] = $name;
 
   } else {
 
-    $item_title = $_SESSION["veiwing-item"];
+    $name = $_SESSION["veiwing-item"];
     $purchase_quantity = $_GET['quantity'];
 
     if (!(isset($_SESSION['cart']))) {
@@ -41,14 +41,14 @@
       die ("bad quantity");
     }
     
-    if(isset($_SESSION['cart'][$item_title])) {
+    if(isset($_SESSION['cart'][$name])) {
   
-      $_SESSION['cart'][$item_title] += $purchase_quantity;
+      $_SESSION['cart'][$name] += $purchase_quantity;
   
     } else {
   
-      $_SESSION['cart'][$item_title] = $purchase_quantity;
-  
+      $_SESSION['cart'][$name] = $purchase_quantity;
+
     }
   
     header("Location: cart.php");
@@ -87,7 +87,7 @@
               <div class="item-container">
                 <div class="item-section item-section1">
                   <?php
-                    echo '<h3 class="item-title">' , $item_title , '</h3>';
+                    echo '<h3 class="item-title">' , $name , '</h3>';
                   ?>
                 </div>
                 <div class="item-section item-section2">
