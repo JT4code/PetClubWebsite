@@ -1,6 +1,6 @@
 <?php
 
-$host = "VeiwStockItemUser@localhost";
+$host = "localhost";
 $dbname = "Stock_items";
 $username = "VeiwStockItemUser";
 $password = "56s78SXKNnH";
