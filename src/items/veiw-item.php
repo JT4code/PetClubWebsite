@@ -5,8 +5,8 @@
   session_start();
 
   if (!(isset($_GET['quantity']))) {
-    $name = $_GET['name'];
-    $pet_type = $_GET['item_pet_type'];
+    $name = $_GET['item_name'];
+    $pet_type = $_GET['pet_type'];
 
     $mysqli = require __DIR__ . "/stock-items-database.php";
 
