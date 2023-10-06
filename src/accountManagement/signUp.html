@@ -1,0 +1,50 @@
+<!DOCTYPE html> <link rel="stylesheet" href="signUpStyles.css">
+
+<html>
+ 
+<head>
+  
+</head>
+
+<body> 
+    
+    <div class="content">
+      <form action="createaccount.php" method="post" class="form">
+        <div class="container">
+            <h1>Create an account:</h1>
+            <hr>
+            
+            <label for="username"><b>Username:</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+      
+            <label for="email"><b>Email:</b></label>
+            <input type="email" placeholder="Enter Email" name="email" required>
+        
+            <label for="psw"><b>Password:</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>  
+            
+            <label for="psw"><b>Confirm Password:</b></label>
+            <input type="password" placeholder="Enter Password" name="passwordConfirm" required>    
+            
+            
+            <hr>
+            
+            <h4><input type="checkbox" class="termsAndConditionsAgreement" name="termsAndConditionsAgreement" required> I Agree  to <a href="termsAndConditions.html">terms and conditions </a></h4>
+
+            <div class="buttons">
+
+              <a href="index.html"> <button type="button" class="cancelbtn">Cancel</button> </a>
+              <a href="#"> <button type="submit" class="signupbtn">Create</button> </a>
+
+            </div>
+            
+          </div>
+        </form>
+      
+        
+        
+        <h4>Already got an acount? <a href="signIn.html" class="link">Sign In</a></h4>
+    
+    </div>
+
+</html>

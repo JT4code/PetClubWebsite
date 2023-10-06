@@ -1,0 +1,44 @@
+<!DOCTYPE html> <link rel="stylesheet" href="signInStyles.css">
+
+<html>
+ 
+<head>
+  
+</head>
+
+<body> 
+    
+    <div class="content">
+      <form action="signin.php" method="post" class="form">
+        <div class="container">
+            <h1>Sign in:</h1>
+            <hr>
+            
+            <label for="email"><b>Username:</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+        
+            <label for="psw"><b>Password:</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>  
+            
+            <hr>
+            
+            <h4><input type="checkbox" class="staySignedIn" name="staySignedIn"> Remember me</h4>
+            <div class="buttons">
+
+              <a href="index.html"> <button type="button" class="cancelbtn">Cancel</button> </a>
+              <a href="#"> <button type="submit" class="signinbtn">Sign in</button> </a>
+
+            </div>
+            
+          </div>
+        </form>
+      
+        
+        
+        <h4>Not got an acount? <a href="signUp.html" class="link">Create one</a></h4>
+        <h4>Forgot password? <a href="resetPassword.html" class="link">Reset it</a></h4>
+
+    
+    </div>
+
+</html>

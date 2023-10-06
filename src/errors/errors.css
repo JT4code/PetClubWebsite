@@ -1,0 +1,38 @@
+body { 
+
+  background-color:#709ef4
+  
+  }
+  
+  
+  .content   /* style for content class section */
+  {
+    margin: auto;   /* alighns the whole content section to center */
+    width: 40%;    /* sets width of content section to 40% of whole screen*/
+    padding:10px;   /* padding inside content section */
+    font-family: Arial, Verdana, sans-serif;  /* sets font of section. if the firs font is not installed on the computer, the browser uses the next avalable font */
+    font-size: 16px;
+    color: aliceblue;
+    background-color: #17033a;
+  }
+  
+  .link {
+    color:#0a5e9b;
+  }
+  
+  .link:hover {
+    color:#3fa2e9
+  }
+  
+  .container { /* padding all around form so stuff is not squished */
+    padding: 16px;
+  }
+  
+  hr {  /* little bar underneath title*/
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  .box {
+    border:1px solid #ccc  /* sets line border around form */
+  }

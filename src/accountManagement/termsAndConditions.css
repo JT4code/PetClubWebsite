@@ -1,0 +1,95 @@
+body { 
+
+background-color:#709ef4
+
+}
+
+
+.content   /* style for content class section */
+{
+  margin: auto;   /* alighns the whole content section to center */
+  width: 40%;    /* sets width of content section to 40% of whole screen*/
+	padding:10px;   /* padding inside content section */
+	font-family: Arial, Verdana, sans-serif;  /* sets font of section. if the firs font is not installed on the computer, the browser uses the next avalable font */
+  font-size: 16px;
+  color: aliceblue;
+	background-color: #17033a;
+}
+
+
+.form {
+  border:1px solid #ccc  /* sets line border around form */
+}
+
+.buttons::after { /* so that content does not overlap */
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.cancelbtn { /*cancle button*/
+    background-color: #6060eb;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    float: right;
+    width: 50%;
+}
+
+
+
+.signupbtn { /*sighn up button*/
+    background-color: #60aaeb;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    float: left;
+    width: 50%;
+}
+
+.cancelbtn:hover {  /* change bg colour on hover */
+    background-color: #bf5b54;
+}
+
+.signupbtn:hover { /* change bg colour on hover */
+    background-color: #52ce58;
+}
+
+.link {
+  color:#0a5e9b;
+}
+
+.link:hover {
+  color:#3fa2e9
+}
+
+.container { /* padding all around form so stuff is not squished */
+  padding: 16px;
+}
+
+hr {  /* little bar underneath title*/
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+input[type=text], input[type=password] { /* formating for password and username boxes */
+  width: 93%; /* width of input boxes */
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+input[type=text]:focus, input[type=password]:focus {  /* darkens password and username boxes when they are selected */
+  background-color: #c1bebe;
+  outline: none;
+}
