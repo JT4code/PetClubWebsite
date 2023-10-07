@@ -4,8 +4,8 @@
 
   session_start();
 
-    $item_type = 'bedding';
-    $pet_type = 'cats';
+    $item_type = 'Bedding';
+    $pet_type = 'Cats';
 
     $mysqli = require __DIR__ . "/stock-items-database.php";
 
