@@ -19,9 +19,9 @@
 
     $name = $item_data["Name"];
     $price = $item_data["Price"];
-    $sale_percentage = $item_data["Discount"];
-    $item_description = $item_data["Description"];
-    $item_image_path = $item_data["Img_path"];
+    $discount = $item_data["Discount"];
+    $description = $item_data["Description"];
+    $img_path = $item_data["Img_path"];
     $stock_quantity = $item_data["Stock_quantity"];
 ?>
 
@@ -74,17 +74,25 @@
 
                 $name = $item_data["Name"];
                 $price = $item_data["Price"];
-                $sale_percentage = $item_data["Discount"];
-                $item_description = $item_data["Description"];
-                $item_image_path = $item_data["Img_path"];
+                $discount = $item_data["Discount"];
+                $description = $item_data["Description"];
+                $img_path = $item_data["Img_path"];
                 $stock_quantity = $item_data["Stock_quantity"];
 
-                echo '<div class="veiw-item-grid-item">
-                  <img class="veiw-item-image" src="' + $item_image_path + '">
-                  <p class="veiw-discounted-item-description">Bedsure Donut cat bed</p>
-                  <p class="veiw-item-discount">10% off</p>
-                  <a href="../../../items/veiw-item.php?pet_type=cats & item_name=bedsure donut bed"><button class="veiw-item-button">£15.30</button></a>
+                if ($discount > 0) {
+                  echo '<div class="veiw-item-grid-item">
+                    <img class="veiw-item-image" src="' + $img_path + '">
+                    <p class="veiw-discounted-item-description">' + $name + '</p>
+                    <p class="veiw-item-discount">' + $discount + '% off</p>
+                    <a href="../../../items/veiw-item.php?pet_type=' + $pet_type + ' & item_name=' + $name + '"><button class="veiw-item-button">£' + $price + '</button></a>
+                  </div>';
+                } else {
+                  echo '<div class="veiw-item-grid-item">
+                  <img class="veiw-item-image" src="' + $img_path + '">
+                  <p class="veiw-discounted-item-description">' + $name + '</p>
+                  <a href="../../../items/veiw-item.php?pet_type=' + $pet_type + ' & item_name=' + $name + '"><button class="veiw-item-button">£' + $price + '</button></a>
                 </div>';
+                }
               };
             
             ?>
