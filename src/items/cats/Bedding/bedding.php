@@ -4,6 +4,8 @@
 
   session_start();
 
+    echo 'loaded;';
+
     $item_type = $_GET['item_type'];
     $pet_type = $_GET['pet_type'];
 
