@@ -1,4 +1,30 @@
 <!DOCTYPE html> <link rel="stylesheet" href="../../../style.css">
+
+<?php 
+
+  session_start();
+
+    $item_type = $_GET['item_type'];
+    $pet_type = $_GET['pet_type'];
+
+    $mysqli = require __DIR__ . "/stock-items-database.php";
+
+    $sql = sprintf("SELECT * FROM items
+    WHERE Pet_type = '%s' AND Item_type = '%s'",
+    $mysqli->real_escape_string($pet_type), $mysqli->real_escape_string($item_type));
+      
+    $result = $mysqli->query($sql);
+      
+    $item_data = $result->fetch_assoc();
+
+    $name = $item_data["Name"];
+    $price = $item_data["Price"];
+    $sale_percentage = $item_data["Discount"];
+    $item_description = $item_data["Description"];
+    $item_image_path = $item_data["Img_path"];
+    $stock_quantity = $item_data["Stock_quantity"];
+?>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <html>
  
@@ -39,12 +65,30 @@
           <div>
 
             <div class="grid-container">
-              <div class="veiw-item-grid-item">
-                <img class="veiw-item-image" src="images/bed1.png">
-                <p class="veiw-discounted-item-description">Bedsure Donut cat bed</p>
-                <p class="veiw-item-discount">10% off</p>
-                <a href="../../../items/veiw-item.php?pet_type=cats & item_name=bedsure donut bed"><button class="veiw-item-button">£15.30</button></a>
-              </div>
+
+            <?php
+
+              foreach($result as $item) {
+
+                $item_data = $item->fetch_assoc();
+
+                $name = $item_data["Name"];
+                $price = $item_data["Price"];
+                $sale_percentage = $item_data["Discount"];
+                $item_description = $item_data["Description"];
+                $item_image_path = $item_data["Img_path"];
+                $stock_quantity = $item_data["Stock_quantity"];
+
+                echo '<div class="veiw-item-grid-item">
+                  <img class="veiw-item-image" src="' + $item_image_path + '">
+                  <p class="veiw-discounted-item-description">Bedsure Donut cat bed</p>
+                  <p class="veiw-item-discount">10% off</p>
+                  <a href="../../../items/veiw-item.php?pet_type=cats & item_name=bedsure donut bed"><button class="veiw-item-button">£15.30</button></a>
+                </div>';
+              };
+            
+            ?>
+
             </div>
           </div>
 

@@ -19,9 +19,9 @@
     $item_data = $result->fetch_assoc();
 
     $price = $item_data["Price"];
-    $sale_percentage = $item_data["Discount"];
-    $item_description = $item_data["Description"];
-    $item_image_path = $item_data["Img_path"];
+    $discount = $item_data["Discount"];
+    $description = $item_data["Description"];
+    $img_path = $item_data["Img_path"];
     $stock_quantity = $item_data["Stock_quantity"];
     $item_type = $item_data["Item_type"];
     $pet_type = $item_data["Pet_type"];
@@ -91,12 +91,12 @@
                   ?>
                 </div>
                 <div class="item-section item-section2">
-                  <img class="item-image" height="100px" width="100px" src= <?php echo $item_image_path ?>>
+                  <img class="item-image" height="100px" width="100px" src= <?php echo $img_path ?>>
                 </div>
                 <div class="item-section item-section3">
 
                   <?php
-                    echo '<p class="item-text">' , $item_description , '</p>';
+                    echo '<p class="item-text">' , $description , '</p>';
                   ?>
 
                 </div>  
@@ -104,14 +104,14 @@
                   <div class="item-price-background">
                   
                   <?php 
-                  if ($sale_percentage === '0') {
+                  if ($discount === '0') {
                     echo '<p class="item-price"><b>£' , $price , '</b></p>';
                     echo '<hr class="line">';
                   }
                   else {
-                    echo '<p class="item-price"><b><s>£' , $price , '</s> | £' , round($price * ((100-$sale_percentage)/100) , 2) , '</b></p>';
+                    echo '<p class="item-price"><b><s>£' , $price , '</s> | £' , round($price * ((100-$discount)/100) , 2) , '</b></p>';
                     echo '<hr class="line">';
-                    echo '<p class="item-discount"><b>' , $sale_percentage , '% off</b></p>';
+                    echo '<p class="item-discount"><b>' , $discount , '% off</b></p>';
                   }
                   ?>
 
