@@ -4,10 +4,8 @@
 
   session_start();
 
-    echo 'loaded;';
-
-    $item_type = $_GET['item_type'];
-    $pet_type = $_GET['pet_type'];
+    $item_type = 'bedding';
+    $pet_type = 'cats';
 
     $mysqli = require __DIR__ . "/stock-items-database.php";
 
