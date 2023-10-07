@@ -14,15 +14,6 @@
     $mysqli->real_escape_string($pet_type), $mysqli->real_escape_string($item_type));
       
     $result = $mysqli->query($sql);
-      
-    $item_data = $result->fetch_assoc();
-
-    $name = $item_data["Name"];
-    $price = $item_data["Price"];
-    $discount = $item_data["Discount"];
-    $description = $item_data["Description"];
-    $img_path = $item_data["Img_path"];
-    $stock_quantity = $item_data["Stock_quantity"];
 ?>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -67,6 +58,8 @@
             <div class="grid-container">
 
             <?php
+
+              echo $result;
 
               foreach($result as $item) {
 
