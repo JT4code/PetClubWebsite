@@ -14,6 +14,8 @@
     #$mysqli->real_escape_string($pet_type), $mysqli->real_escape_string($item_type));
       
     $result = $mysqli->query($sql);
+    echo $sql;
+    echo $result;
 ?>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
