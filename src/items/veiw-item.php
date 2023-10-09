@@ -15,6 +15,10 @@
     $mysqli->real_escape_string($name), $mysqli->real_escape_string($pet_type));
       
     $result = $mysqli->query($sql);
+
+    if (!isset($result)) {
+      header("Location: item-not-found.html");
+    }
       
     $item_data = $result->fetch_assoc();
 
