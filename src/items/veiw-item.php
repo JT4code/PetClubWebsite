@@ -10,7 +10,7 @@
 
     $mysqli = require __DIR__ . "/stock-items-database.php";
 
-    $sql = sprintf("FETCH * FROM items
+    $sql = sprintf("SELECT * FROM items
     WHERE name = '%s' AND pet_type = '%s'",
     $mysqli->real_escape_string($name), $mysqli->real_escape_string($pet_type));
       
@@ -19,7 +19,7 @@
     $item_data = $result->fetch_assoc();
 
     $price = $item_data["Price"];
-    $discount = $item_data["Discount"];
+    $sale_percentage = $item_data["Discount"];
     $description = $item_data["Description"];
     $img_path = $item_data["Img_path"];
     $stock_quantity = $item_data["Stock_quantity"];
@@ -104,14 +104,14 @@
                   <div class="item-price-background">
                   
                   <?php 
-                  if ($discount === '0') {
+                  if ($sale_percentage === '0') {
                     echo '<p class="item-price"><b>£' , $price , '</b></p>';
                     echo '<hr class="line">';
                   }
                   else {
-                    echo '<p class="item-price"><b><s>£' , $price , '</s> | £' , round($price * ((100-$discount)/100) , 2) , '</b></p>';
+                    echo '<p class="item-price"><b><s>£' , $price , '</s> | £' , round($price * ((100-$sale_percentage)/100) , 2) , '</b></p>';
                     echo '<hr class="line">';
-                    echo '<p class="item-discount"><b>' , $discount , '% off</b></p>';
+                    echo '<p class="item-discount"><b>' , $sale_percentage , '% off</b></p>';
                   }
                   ?>
 
