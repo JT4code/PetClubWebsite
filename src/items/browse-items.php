@@ -65,17 +65,10 @@
 
               echo $result;
 
-              foreach($result as $item) {
-
-                $item_data = $item->fetch_assoc();
-
-                $name = $item_data["Name"];
-                $price = $item_data["Price"];
-                $discount = $item_data["Discount"];
-                $description = $item_data["Description"];
-                $img_path = $item_data["Img_path"];
-                $stock_quantity = $item_data["Stock_quantity"];
-
+              if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                #print_r($row);
                 if ($discount > 0) {
                   echo '<div class="veiw-item-grid-item">
                     <img class="veiw-item-image" src="' + $img_path + '">
@@ -90,7 +83,11 @@
                   <a href="../../../items/veiw-item.php?pet_type=' + $pet_type + ' & item_name=' + $name + '"><button class="veiw-item-button">£' + $price + '</button></a>
                 </div>';
                 }
-              };
+                  echo "id: " . $row["Name"] . " - Name: " . $row["Price"] . " " . $row["Discount"] . "<br>";
+                }
+              } else {
+                echo "0 results";
+              }
             
             ?>
 
