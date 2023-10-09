@@ -1,26 +1,16 @@
-<!DOCTYPE html> <link rel="stylesheet" href="../../../style.css">
+<!DOCTYPE html> <link rel="stylesheet" href="../style.css">
 
 <?php 
 
   session_start();
 
-    $item_type = 'Bedding';
-    $pet_type = 'Cats';
-
     $mysqli = require __DIR__ . "/stock-items-database.php";
 
-    $sql = sprintf("SELECT * FROM items
-    WHERE Pet_type = '%s' AND Item_type = '%s'",
-    $mysqli->real_escape_string($pet_type), $mysqli->real_escape_string($item_type));
-    $result = $mysqli->query($sql);
-    echo $item_type;
-    echo $mysqli;
-    echo $sql;
-    echo $result;
+	$result = $mysqli->query("SELECT * FROM items");
     
 ?>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <html>
  
 <head>
@@ -63,31 +53,36 @@
 
             <?php
 
-              echo $result;
-
-              if ($result->num_rows > 0) {
-                // output data of each row
-                while($row = $result->fetch_assoc()) {
-                #print_r($row);
-                if ($discount > 0) {
-                  echo '<div class="veiw-item-grid-item">
-                    <img class="veiw-item-image" src="' + $img_path + '">
-                    <p class="veiw-discounted-item-description">' + $name + '</p>
-                    <p class="veiw-item-discount">' + $discount + '% off</p>
-                    <a href="../../../items/veiw-item.php?pet_type=' + $pet_type + ' & item_name=' + $name + '"><button class="veiw-item-button">£' + $price + '</button></a>
-                  </div>';
-                } else {
-                  echo '<div class="veiw-item-grid-item">
-                  <img class="veiw-item-image" src="' + $img_path + '">
-                  <p class="veiw-discounted-item-description">' + $name + '</p>
-                  <a href="../../../items/veiw-item.php?pet_type=' + $pet_type + ' & item_name=' + $name + '"><button class="veiw-item-button">£' + $price + '</button></a>
-                </div>';
-                }
-                  echo "id: " . $row["Name"] . " - Name: " . $row["Price"] . " " . $row["Discount"] . "<br>";
-                }
-              } else {
-                echo "0 results";
-              }
+				if ($result->num_rows > 0) {
+					while($item_data = $result->fetch_assoc()) {
+						$name = $item_data["Name"];
+						$price = $item_data["Price"];
+						$discount = $item_data["Discount"];
+						$img_path = $item_data["Img_path"];
+						$pet_type = $item_data["Pet_type"];
+												
+						if ($discount === '0') {
+							
+							echo '<div class="veiw-item-grid-item">
+								<img class="veiw-item-image" src="' . $img_path . '">
+								<p class="veiw-item-description">' . $name . 'eee</p>
+								<a href="../../../items/veiw-item.php?pet_type=' . $pet_type . ' & item_name=' . $name . '"><button class="veiw-item-button">£' . $price . '</button></a>
+								</div>';
+							
+						} else {
+							
+							echo '<div class="veiw-item-grid-item">
+								<img class="veiw-item-image" src="' . $img_path . '">
+								<p class="veiw-discounted-item-description">' . $name . '</p>
+								<p class="veiw-item-discount">' . $discount . '% off</p>
+								<a href="../../../items/veiw-item.php?pet_type=' . $pet_type . ' & item_name=' . $name . '"><button class="veiw-item-button">£' . $price . '</button></a>
+                  				</div>';
+							
+						}
+				  }
+				} else {
+				  echo "No results";
+				}
             
             ?>
 
