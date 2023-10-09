@@ -114,7 +114,7 @@ hr {  /* little bar underneath title*/
   background-color: #08144b;
 }
 
-#solid-button {
+.solid-button {
   background-color: #3b3bd2;
   border: none;
   font-family: Arial, Verdana, sans-serif;
@@ -129,7 +129,7 @@ hr {  /* little bar underneath title*/
   border-radius: 10px;
 }
 
-#solid-button:hover {  /* change bg colour on hover */
+.solid-button:hover {  /* change bg colour on hover */
   background-color: #08144b;
 }
 
