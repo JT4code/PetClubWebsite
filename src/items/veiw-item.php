@@ -16,7 +16,7 @@
       
     $result = $mysqli->query($sql);
 
-    if (!isset($result)) {
+    if (mysqli_num_rows($result) == 0) {
       header("Location: item-not-found.html");
     }
       
