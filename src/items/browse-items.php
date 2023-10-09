@@ -65,7 +65,7 @@
 							
 							echo '<div class="veiw-item-grid-item">
 								<img class="veiw-item-image" src="' . $img_path . '">
-								<p class="veiw-item-description">' . $name . 'eee</p>
+								<p class="veiw-item-description">' . $name . '</p>
 								<a href="../../../items/veiw-item.php?pet_type=' . $pet_type . ' & item_name=' . $name . '"><button class="veiw-item-button">£' . $price . '</button></a>
 								</div>';
 							
