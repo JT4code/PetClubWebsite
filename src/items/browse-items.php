@@ -8,7 +8,7 @@
   $item_type = $_GET['item_type'];
 
   if (!isset($pet_type) || !isset($item_type)) {
-    header("Location: item-type-not-found.html");
+    header("Location: item-type-not-set.html");
   }
 
   $mysqli = require __DIR__ . "/stock-items-database.php";
