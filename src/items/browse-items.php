@@ -4,12 +4,20 @@
 
   session_start();
 
-  $pet_type = "Cats";
-  $item_type = "Bedding";
+  $pet_type = $_GET['pet_type'];
+  $item_type = $_GET['item_type'];
+
+  if (!isset($pet_type) || !isset($item_type)) {
+    header("Location: item-type-not-found.html");
+  }
 
   $mysqli = require __DIR__ . "/stock-items-database.php";
 
-	$result = $mysqli->query("SELECT * FROM items");
+	$sql = sprintf("SELECT * FROM items
+    WHERE Pet_type = '%s' AND Item_type = '%s'",
+    $mysqli->real_escape_string($pet_type), $mysqli->real_escape_string($item_type));
+  
+     $result = $mysqli->query($sql);
     
 ?>
 
