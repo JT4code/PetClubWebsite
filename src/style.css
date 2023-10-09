@@ -114,6 +114,25 @@ hr {  /* little bar underneath title*/
   background-color: #08144b;
 }
 
+#solid-button {
+  background-color: #3b3bd2;
+  border: none;
+  font-family: Arial, Verdana, sans-serif;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#solid-button:hover {  /* change bg colour on hover */
+  background-color: #08144b;
+}
+
 .link {
 color:#0a5e9b;
 }
