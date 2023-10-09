@@ -4,7 +4,10 @@
 
   session_start();
 
-    $mysqli = require __DIR__ . "/stock-items-database.php";
+  $pet_type = "Cats";
+  $item_type = "Bedding";
+
+  $mysqli = require __DIR__ . "/stock-items-database.php";
 
 	$result = $mysqli->query("SELECT * FROM items");
     
@@ -45,7 +48,7 @@
 
     <div class="content">
 
-          <h2 class="pagetitle">Beds:</h2>
+          <h2 class="pagetitle"><?php echo $item_type; ?></h2>
 
           <div>
 
@@ -59,7 +62,6 @@
 						$price = $item_data["Price"];
 						$discount = $item_data["Discount"];
 						$img_path = $item_data["Img_path"];
-						$pet_type = $item_data["Pet_type"];
 												
 						if ($discount === '0') {
 							
