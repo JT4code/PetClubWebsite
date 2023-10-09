@@ -10,7 +10,7 @@
 
     $mysqli = require __DIR__ . "/stock-items-database.php";
 
-    $sql = sprintf("SELECT * FROM items
+    $sql = sprintf("FETCH * FROM items
     WHERE name = '%s' AND pet_type = '%s'",
     $mysqli->real_escape_string($name), $mysqli->real_escape_string($pet_type));
       

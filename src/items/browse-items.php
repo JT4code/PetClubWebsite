@@ -12,7 +12,6 @@
     $sql = sprintf("SELECT * FROM items
     WHERE Pet_type = '%s' AND Item_type = '%s'",
     $mysqli->real_escape_string($pet_type), $mysqli->real_escape_string($item_type));
-      
     $result = $mysqli->query($sql);
     echo $item_type;
     echo $mysqli;
