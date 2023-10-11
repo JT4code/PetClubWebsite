@@ -68,21 +68,32 @@
 </head>
 
 <body>
+  <div class="page">
+  <div id="header">        
+        <img src="images/Picture2.png" style="float: right; padding: 0%; margin-top: 20px;" height="100px">
+        <p  style="float: right; margin-top: 60px;">proud to<br> be partnered with</p>
+        <img src="images/logo.png" style="float: right; padding: 0%;" height="130px">
 
-      <div id="navbar">
-        <p>
+        <h1 id="banner">IT'S RAINING CATS AND DOGS</h1>
+        <p>est. 1953</p>
+
+        <hr>
+      </div>
+      <div class="navbar">
+        <hr class="navbar-line">
         <nav>
-          <a id="button" href="../index.html">Home</a>
-          <a id="button" href="../Food-and-water/foodwater.html" width="10%">Food</a>
-          <a id="button" href="../Bedding/bedding.html" width="10%">Bedding</a>
-          <a id="button" href="../Housing/housing.html" width="10%">Housing</a>
-          <a id="button" href="../Toys/toys.html" width="10%">Toys</a>
-          <a id="button" href="../Hygine/hygiene.html" width="10%">Hygiene</a>
-          <a id="button" href="../Fish/fish.html" width="10%">Fish</a>
-          <a id="button" class="floatrightbutton" href="../accountManagement/signUp.html" width="10%">Register</a>
-          <a id="button" class="floatrightbutton" href="../accountManagement/signIn.html" width="10%">Sign In</a>
+          <a class="navbar-button-selected" href="index.html">Home</a>
+          <a class="navbar-button navbar-button-hide-on-small-width" href="Food-and-water/foodwater.html" width="10%">Cats</a>
+          <a class="navbar-button navbar-button-hide-on-small-width" href="Bedding/bedding.html" width="10%">Dogs</a>
+          <a class="navbar-button navbar-button-hide-on-small-width" href="Housing/housing.html" width="10%">Rabbits</a>
+          <a class="navbar-button navbar-button-hide-on-small-width" href="Toys/toys.html" width="10%">Chickens</a>
+          <a class="navbar-button navbar-button-hide-on-small-width" href="Hygine/hygiene.html" width="10%">Rodents</a>
+          <a class="navbar-button navbar-button-hide-on-small-width" href="Fish/fish.html" width="10%">Fish</a>
+          <a class="navbar-button navbar-button-hide-on-small-width" href="Fish/fish.html" width="10%">Reptiles</a>
+
+          <a class="navbar-button navbar-float-right-button navbar-register-button" href="accountManagement/signUp.html" width="10%">Register</a>
+          <a class="navbar-button navbar-float-right-button" href="accountManagement/signIn.html" width="10%">Sign In</a>
         </nav>
-        </p>
       </div>
 
     <div class="item-buy-content">
@@ -195,7 +206,6 @@
           <li>Contact us</li>
           <li>Contact us</li>
         </div>
-    </div>   
-    
+  </div>   
 </body>
 </html>
