@@ -2,8 +2,6 @@
 
 body {
   margin: 0;
-  background-color: #3f6ac6;
-
 }
 
 .wrapper {
@@ -62,7 +60,7 @@ body {
 	margin:0;
 }
 
-#navbar
+.navbar
 {
   position: sticky;
   top: 0;
@@ -70,9 +68,6 @@ body {
    
 	width:100%;
 	margin:auto;
-  padding-top: 0px;
-	padding-left: 15px;
-  padding-right: 50px;
   padding-bottom: 10px;
   background-color: #3f6ac6;
   overflow: hidden;
@@ -95,7 +90,7 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 0px 5px;/*2px 2px;*/
+  margin-left: 10px;
   height: 20px;
   cursor: pointer;
   border-bottom-left-radius: 10px;
@@ -108,6 +103,12 @@ body {
   transition-duration: 0.5s;
 }
 
+@media screen and (max-width: 1200px) {
+  .navbar-button-hide-on-small-width {
+      display: none !important;
+  }
+}
+
 .navbar-button-selected {
   background-color: #08144b;/*#3b3bd231;*/
   border: none;
@@ -118,10 +119,27 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 0px 5px;/*2px 2px;*/
+  margin-left: 10px;
   height: 20px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.navbar-float-right-button {
+  float: right;
+}
+
+.navbar-register-button {
+  margin-right: 50px;
+}
+
+.navbar-logo {
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  margin-bottom: -16px;
+  margin-left: 24px;
+  margin-right: 8px;
 }
 
 #content
@@ -129,12 +147,17 @@ body {
   background-color: #3f6ac6;
 }
 
-.content
-{
+.content {
 	padding:50px;
 	font-family: Arial, Verdana, sans-serif;
   font-size: 30px;
 	background-color: #e0f6ff;
+}
+
+.page {
+  background-color: #3f6ac6;
+  max-width: 2000px;
+  margin: auto;
 }
 
 hr {  /* little bar underneath title*/
@@ -143,7 +166,7 @@ hr {  /* little bar underneath title*/
 }
 
 .solid-button {
-  background-color: #3b3bd2;
+  background-color: #24538d;
   border: none;
   font-family: Arial, Verdana, sans-serif;
   color: white;
@@ -183,9 +206,6 @@ color:#3fa2e9
   padding-left: 20px;
 }
 
-.floatrightbutton {
-  float: right;
-}
 
 
 
@@ -207,7 +227,7 @@ color:#3fa2e9
 }
 
 .discover-our-story-button {
-  background-color: #3b3bd2;
+  background-color: #24538d;
   border: none;
   font-family: Arial, Verdana, sans-serif;
   color: white;
@@ -219,6 +239,10 @@ color:#3fa2e9
   margin: 2px 2px;
   cursor: pointer;
   border-radius: 10px;
+}
+
+.discover-our-story-button:hover {
+  background-color: #08144b;
 }
 
 .discover-our-story-container {
@@ -268,7 +292,7 @@ color:#3fa2e9
 .grid-container {
   display: grid;
   gap: 50px 100px;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 10px;
 }
 
@@ -282,6 +306,7 @@ color:#3fa2e9
   width: 300px;
   height: 300px;
   overflow: hidden;
+  margin: auto;
 }
 
 .grid-item:hover {
