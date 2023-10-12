@@ -81,7 +81,7 @@
       <div class="navbar">
         <hr class="navbar-line">
         <nav>
-          <a class="navbar-button" href="index.html">Home</a>
+          <a class="navbar-button" href="../index.html">Home</a>
           <a <?php if ($pet_type == "Cats" || $pet_type == "Cats ") { echo 'class="navbar-button-selected navbar-button-hide-on-small-width"';} else {echo 'class="navbar-button navbar-button-hide-on-small-width" href="Cats/Cats.html"';} ?> width="10%">Cats</a>
           <a <?php if ($pet_type == "Dogs" || $pet_type == "Dogs ") { echo 'class="navbar-button-selected navbar-button-hide-on-small-width"';} else {echo 'class="navbar-button navbar-button-hide-on-small-width" href="Dogs/Dogs.html"';} ?> width="10%">Dogs</a>
           <a <?php if ($pet_type == "Rabbits" || $pet_type == "Rabbits ") { echo 'class="navbar-button-selected navbar-button-hide-on-small-width"';} else {echo 'class="navbar-button navbar-button-hide-on-small-width" href="Rabbits/Rabbits.html"';} ?> width="10%">Rabbits</a>
