@@ -383,8 +383,18 @@ color:#3fa2e9
   text-align: center;
   border-radius: 20px;
   width: 300px;
-  height: 310px;
+  height: 300px;
   overflow: hidden;
+  margin: auto;
+}
+
+.veiw-item-grid-item:hover {
+  transform: translate(0, 4px) scale(1.1); 
+  transition-duration: 0.5s;
+
+  /* for april-fools? : 
+  transform: translate(0, 4px) scale(5);
+  transition-duration: 10s;*/
 }
 
 .veiw-item-image {
