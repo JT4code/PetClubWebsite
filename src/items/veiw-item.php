@@ -69,7 +69,7 @@
 
 <body>
   <div class="page">
-  <div id="header">        
+      <div id="header">        
         <img src="images/Picture2.png" style="float: right; padding: 0%; margin-top: 20px;" height="100px">
         <p  style="float: right; margin-top: 60px;">proud to<br> be partnered with</p>
         <img src="images/logo.png" style="float: right; padding: 0%;" height="130px">
@@ -82,14 +82,14 @@
       <div class="navbar">
         <hr class="navbar-line">
         <nav>
-          <a class="navbar-button-selected" href="index.html">Home</a>
-          <a class="navbar-button navbar-button-hide-on-small-width" href="Food-and-water/foodwater.html" width="10%">Cats</a>
-          <a class="navbar-button navbar-button-hide-on-small-width" href="Bedding/bedding.html" width="10%">Dogs</a>
-          <a class="navbar-button navbar-button-hide-on-small-width" href="Housing/housing.html" width="10%">Rabbits</a>
-          <a class="navbar-button navbar-button-hide-on-small-width" href="Toys/toys.html" width="10%">Chickens</a>
-          <a class="navbar-button navbar-button-hide-on-small-width" href="Hygine/hygiene.html" width="10%">Rodents</a>
-          <a class="navbar-button navbar-button-hide-on-small-width" href="Fish/fish.html" width="10%">Fish</a>
-          <a class="navbar-button navbar-button-hide-on-small-width" href="Fish/fish.html" width="10%">Reptiles</a>
+          <a class="navbar-button" href="index.html">Home</a>
+          <a <?php if ($pet_type == "Cats" || $pet_type == "Cats ") { echo 'class="navbar-button-selected navbar-button-hide-on-small-width"';} else {echo 'class="navbar-button navbar-button-hide-on-small-width" href="Cats/Cats.html"';} ?> width="10%">Cats</a>
+          <a <?php if ($pet_type == "Dogs" || $pet_type == "Dogs ") { echo 'class="navbar-button-selected navbar-button-hide-on-small-width"';} else {echo 'class="navbar-button navbar-button-hide-on-small-width" href="Dogs/Dogs.html"';} ?> width="10%">Dogs</a>
+          <a <?php if ($pet_type == "Rabbits" || $pet_type == "Rabbits ") { echo 'class="navbar-button-selected navbar-button-hide-on-small-width"';} else {echo 'class="navbar-button navbar-button-hide-on-small-width" href="Rabbits/Rabbits.html"';} ?> width="10%">Rabbits</a>
+          <a <?php if ($pet_type == "Chickens" || $pet_type == "Chickens ") { echo 'class="navbar-button-selected navbar-button-hide-on-small-width"';} else {echo 'class="navbar-button navbar-button-hide-on-small-width" href="Chickens/Chickens.html"';} ?> width="10%">Chickens</a>
+          <a <?php if ($pet_type == "Rodents" || $pet_type == "Rodents ") { echo 'class="navbar-button-selected navbar-button-hide-on-small-width"';} else {echo 'class="navbar-button navbar-button-hide-on-small-width" href="Rodents/Rodents.html"';} ?> width="10%">Rodents</a>
+          <a <?php if ($pet_type == "Fish" || $pet_type == "Fish ") { echo 'class="navbar-button-selected navbar-button-hide-on-small-width"';} else {echo 'class="navbar-button navbar-button-hide-on-small-width href="Fish/Fish.html"';} ?> width="10%">Fish</a>
+          <a <?php if ($pet_type == "Reptiles" || $pet_type == "Reptiles ") { echo 'class="navbar-button-selected navbar-button-hide-on-small-width"';} else {echo 'class="navbar-button navbar-button-hide-on-small-width" href="Reptiles/Reptiles.html"';} ?> width="10%">Reptiles</a>
 
           <a class="navbar-button navbar-float-right-button navbar-register-button" href="accountManagement/signUp.html" width="10%">Register</a>
           <a class="navbar-button navbar-float-right-button" href="accountManagement/signIn.html" width="10%">Sign In</a>
