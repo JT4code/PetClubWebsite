@@ -28,7 +28,6 @@
     $img_path = $item_data["Img_path"];
     $stock_quantity = $item_data["Stock_quantity"];
     $item_type = $item_data["Item_type"];
-    $pet_type = $item_data["Pet_type"];
 
     $_SESSION["veiwing-item"] = $name;
 
