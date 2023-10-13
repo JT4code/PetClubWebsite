@@ -79,7 +79,7 @@
 							echo '<div class="veiw-item-grid-item">
 								<img class="veiw-item-image" src="' . $img_path . '">
 								<p class="veiw-item-description">' . $name . '</p>
-								<a href="veiw-item.php?pet_type=' . $pet_type . ' & item_name=' . $name . '"><button class="veiw-item-button">£' . $price . '</button></a>
+								<a href="veiw-item.php?pet_type=' . $pet_type . '&item_name=' . $name . '"><button class="veiw-item-button">£' . $price . '</button></a>
 								</div>';
 							
 						} else {
@@ -88,7 +88,7 @@
 								<img class="veiw-item-image" src="' . $img_path . '">
 								<p class="veiw-discounted-item-description">' . $name . '</p>
 								<p class="veiw-item-discount">' . $discount . '% off</p>
-								<a href="veiw-item.php?pet_type=' . $pet_type . ' & item_name=' . $name . '"><button class="veiw-item-button">£' . $price . '</button></a>
+								<a href="veiw-item.php?pet_type=' . $pet_type . '&item_name=' . $name . '"><button class="veiw-item-button">£' . $price . '</button></a>
                   				</div>';
 							
 						}
