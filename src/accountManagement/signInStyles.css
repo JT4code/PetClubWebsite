@@ -14,11 +14,13 @@ body {
     font-size: 16px;
     color: aliceblue;
     background-color: #17033a;
+    border-radius: 20px;
   }
   
   
   .form {
-    border:1px solid #ccc  /* sets line border around form */
+    border:1px solid #ccc;  /* sets line border around form */
+    border-radius: 10px;
   }
   
   .buttons::after { /* so that content does not overlap */
