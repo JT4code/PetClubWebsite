@@ -166,7 +166,7 @@
                   <a href="ourstory.html"><button class="item-buy-now-button">Buy now ></button></a>
                   <br>
                   <?php
-                  echo '<a href="' , $pet_type , '/' , $item_type , '/' , $item_type ,'.html"><button class="item-veiw-others-button">< Keep looking</button></a>';
+                  echo '<a href="browse-itmes.php?pet_type='. $pet_type , '&item_type=' , $item_type . '"><button class="item-veiw-others-button">< Keep looking</button></a>';
                   ?>
 
                   <hr class="line" style="margin-top: 20px;">
