@@ -31,9 +31,9 @@
 <body>
   <div class="page">
       <div id="header">        
-        <img src="images/Picture2.png" style="float: right; padding: 0%; margin-top: 20px;" height="100px">
+        <img src="../images/Picture2.png" style="float: right; padding: 0%; margin-top: 20px;" height="100px">
         <p  style="float: right; margin-top: 60px;">proud to<br> be partnered with</p>
-        <img src="images/logo.png" style="float: right; padding: 0%;" height="130px">
+        <img src="../images/logo.png" style="float: right; padding: 0%;" height="130px">
 
         <h1 id="banner">IT'S RAINING CATS AND DOGS</h1>
         <p>est. 1953</p>
