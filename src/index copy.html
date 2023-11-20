@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font: 1em sans-serif;
+      text-align: center;
+    }
+    header,footer {background: tomato; color: white;}
+    nav,aside {background: mistyrose;}
+    header {display: flex; align-items: center;}
+    header > div {padding:  0 1em;}
+  
+    header > div:nth-child(3) {
+      margin: 0 0 0 auto;
+    }
+
+    div.grid-container{
+      display: grid;
+      width: 100vw;
+      height: 100vh;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: 10% 15% 60% 10% 5%;
+    }
+
+    header { grid-column: span 10;}
+    nav { grid-column: span 10;}
+    main { grid-column: span 10;}
+    aside { grid-column: span 10;}
+    footer { grid-column: span 10;}
+
+    /*header.grid-container > div:nth-child(3) {
+      grid-column: 10;
+    }*/
+  </style>
+</head>
+<!--<header class="flex-container">
+  <div>Home</div>
+  <div>Other</div>
+  <div>Contact</div>
+</header>-->
+<br>
+<div class="grid-container">
+  <header>
+    <div>Home</div>
+    <div>Other</div>
+    <div>Contact</div>
+  </header>
+  <nav>Menue</nav>
+  <main>Content</main>
+  <aside>Aside</aside>
+  <footer>Footer</footer>
+</div>
